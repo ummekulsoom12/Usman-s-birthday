@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Just For You ❤️</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Floating background -->
+    <div class="stars"></div>
+
+    <!-- ================= FIRST SCREEN ================= -->
+
+    <section class="screen active" id="screen1">
+
+        <div class="glow"></div>
+
+        <div class="content">
+
+            <div class="tiny-heart">♡</div>
+
+            <p class="eyebrow">
+                A little something from Umme
+            </p>
+
+            <h1>
+                Welcome to
+                <br>
+                <span>the love of Umme's life.</span>
+            </h1>
+
+            <p class="subtitle">
+                Before you continue...
+                <br>
+                I have one tiny question for you. 👀
+            </p>
+
+            <button class="main-btn" onclick="nextScreen(2)">
+                How am I doing? →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SECOND SCREEN ================= -->
+
+    <section class="screen" id="screen2">
+
+        <div class="content">
+
+            <div class="gift-icon">
+                🎁
+            </div>
+
+            <p class="eyebrow">
+                WAIT...
+            </p>
+
+            <h1>
+                Are you ready
+                <br>
+                <span>for your surprise?</span>
+            </h1>
+
+            <p class="subtitle">
+                Because I've been waiting to show you this...
+                <br>
+                and no, you cannot skip it. 😌
+            </p>
+
+            <div class="button-row">
+
+                <button class="main-btn" onclick="startSurprise()">
+                    YES ❤️
+                </button>
+
+                <button class="secondary-btn" onclick="tease()">
+                    Not yet 👀
+                </button>
+
+            </div>
+
+            <p id="teaseText"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COUNTDOWN ================= -->
+
+    <section class="screen" id="countdownScreen">
+
+        <div class="countdown-content">
+
+            <p>
+                Okay birthday boy...
+            </p>
+
+            <h2 id="countdown">
+                3
+            </h2>
+
+            <span>
+                Get ready ❤️
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BIRTHDAY ================= -->
+
+    <!-- ================= BIRTHDAY ================= -->
+
+<section class="screen birthday-screen" id="birthdayScreen">
+
+    <div class="birthday-content">
+
+        <div class="birthday-top">
+
+            <div class="sparkles">✦　✧　✦</div>
+
+            <p class="eyebrow">
+                18 AUGUST • A SPECIAL DAY
+            </p>
+
+            <h1 class="birthday-heading">
+                HAPPY
+                <br>
+                <span>BIRTHDAY</span>
+            </h1>
+
+            <div class="heart-line">
+                ───── ♡ ─────
+            </div>
+
+            <p class="birthday-subtitle">
+                To the person who somehow became
+                <br>
+                one of the most special people in my life.
+            </p>
+
+        </div>
+
+
+        <!-- ================= MEMORY WALL ================= -->
+
+        <div class="memory-wall">
+
+            <div class="memory-intro">
+                <span>03</span>
+                <p>little pieces of you</p>
+            </div>
+
+
+            <div class="photo-scene">
+
+                <div class="photo-card photo-one">
+
+                    <div class="tape"></div>
+
+                    <img src="{{ url_for('static', filename='photos/photo1.jpg') }}">
+
+                    <div class="photo-caption">
+                        that smile ♡
+                    </div>
+
+                </div>
+
+
+                <div class="photo-card photo-two">
+
+                    <div class="tape"></div>
+
+                    <img src="{{ url_for('static', filename='photos/photo2.jpg') }}">
+
+                    <div class="photo-caption">
+                        my favorite human.
+                    </div>
+
+                </div>
+
+
+                <div class="photo-card photo-three">
+
+                    <div class="tape"></div>
+
+                    <img src="{{ url_for('static', filename='photos/photo3.jpg') }}">
+
+                    <div class="photo-caption">
+                        okay... you're cute 😂
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= LETTER ================= -->
+
+        <div class="letter-section">
+
+            <p class="letter-number">01 / A LETTER</p>
+
+            <div class="letter">
+
+                <div class="letter-icon">♡</div>
+
+                <h2>
+                    For you,
+                </h2>
+
+                <p>
+                    Happy birthday to the person who somehow managed
+                    to become such an important part of my life. ❤️
+                </p>
+
+                <p>
+                    I hope this new year brings you happiness, success,
+                    peace, beautiful memories, and everything you've
+                    been working so hard for.
+                </p>
+
+                <p>
+                    And yes, I hope you continue being the same
+                    annoying, funny and caring person that somehow
+                    makes my days a little better. 😂
+                </p>
+
+                <p>
+                    Today is all about you, so enjoy your day,
+                    smile a little extra, and remember that somewhere
+                    there's a girl who spent her time coding an entire
+                    website just to make you smile.
+                </p>
+
+                <div class="signature">
+
+                    <span>With love,</span>
+
+                    <strong>
+                        Umme ❤️
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= FINAL BUTTON ================= -->
+
+        <div class="final-section">
+
+            <p>
+                And because I couldn't possibly end it here...
+            </p>
+
+            <button class="last-btn" onclick="showFinalMessage()">
+                One last thing... 👀
+            </button>
+
+        </div>
+
+
+        <div class="final-message" id="finalMessage">
+
+            <div class="final-heart">♡</div>
+
+            <h2>
+                If I had to choose
+                <br>
+                all over again...
+            </h2>
+
+            <p>
+                I'd still choose you.
+            </p>
+
+            <span>
+                Happy Birthday ❤️
+            </span>
+
+        </div>
+
+
+        <p class="bottom-text">
+            made with code, caffeine & a ridiculous amount of love.
+        </p>
+
+    </div>
+
+</section>
+            <p class="bottom-text">
+                Made with code, caffeine & a ridiculous amount of love. ♡
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
